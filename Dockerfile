@@ -1,4 +1,4 @@
-from python:3
-ADD rssreader.py /
-RUN pip install feedreader
-CMD [ "python" , "./rssreader.py" ]
+from registry.access.redhat.com/ubi8/python-27
+ADD rssread.py ./
+RUN pip install feedparser requests
+CMD [ "python" , "./rssread.py" ]
